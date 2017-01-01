@@ -11,6 +11,10 @@ var ids         = []
 
 server.listen(3000)
 
+http.listen(process.env.PORT || 3000, function(){
+  console.log('listening on', http.address().port);
+});
+
 console.log("server running...")
 
 app.use(express.static("public"))
